@@ -156,7 +156,7 @@
                     console.log(UserInfo, "uid==============")
                     console.log(this.recruitId, 'id')
                     uni.request({
-                        url: this.Livingurl + '/api/org_activity/org_activity_reply_add',
+                        url: this.Livingurl + '#',
                         method: 'POST',
                         data: {
                             content: e.detail.value,
@@ -211,7 +211,7 @@
                     console.log(uid, "uid==============")
                     console.log(this.recruitId, "ssssid")
                     uni.request({
-                        url: this.Livingurl + '/api/org_activity/activity_add_or_del',
+                        url: this.Livingurl + '#',
                         method: 'POST',
                         data: {
                             user_id: uid,
@@ -260,7 +260,7 @@
                         }
                         console.log(poat_data, 'poat_data==')
                         uni.request({
-                            url: this.Livingurl + '/api/hlf_collection/hlf_collection_add',
+                            url: this.Livingurl + '#',
                             method: 'POST',
                             data: poat_data,
                             success: (res) => {
@@ -280,7 +280,7 @@
                     } else {
                         console.log("收藏id", is_collection)
                         uni.request({
-                            url: this.Livingurl + '/api/hlf_collection/hlf_collection_del',
+                            url: this.Livingurl + '#',
                             method: 'GET',
                             data: {
                                 id: is_collection
@@ -306,7 +306,7 @@
                 this.page++;
                 console.log(this.page)
                 uni.request({
-                    url: this.Livingurl + '/api/org_activity/org_activity_reply_list',
+                    url: this.Livingurl + '#',
                     method: 'GET',
                     data: {
                         org_activity_id: this.recruitId,
@@ -331,7 +331,7 @@
                 var uid = UserInfo.user_id;
                 console.log(UserInfo, "用于头像")
                 uni.request({
-                    url: this.Livingurl + '/api/org_activity/detail',
+                    url: this.Livingurl + '#',
                     method: 'GET',
                     data: {
                         id: this.recruitId,
